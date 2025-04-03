@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 import { 
   Carousel,
   CarouselContent,
@@ -80,6 +81,10 @@ const Hero = () => {
     }
   ];
 
+=======
+
+const Hero = () => {
+>>>>>>> b65cfcf5d492b983a9ba61a8fed63f28791ccc92
   return (
     <section id="home" className="relative py-20 md:py-32 overflow-hidden">
       {/* Decorative elements */}
@@ -115,6 +120,7 @@ const Hero = () => {
           </div>
           <div className="md:w-1/2 relative z-10">
             <div className="w-full h-80 md:h-96 bg-white p-4 rounded-2xl rangoli-shadow overflow-hidden relative">
+<<<<<<< HEAD
               <Carousel className="w-full h-full rounded-xl overflow-hidden" opts={{ loop: true }}>
                 <CarouselContent className="h-full">
                   {heroSlides.map((slide) => (
@@ -137,6 +143,12 @@ const Hero = () => {
                 <CarouselPrevious className="left-2" />
                 <CarouselNext className="right-2" />
               </Carousel>
+=======
+              {/* Placeholder for a beautiful rangoli image */}
+              <div className="w-full h-full bg-gradient-to-br from-rangoli-purple/30 to-rangoli-orange/30 rounded-xl flex items-center justify-center">
+                <span className="font-dancing text-3xl text-rangoli-purple">Rangoli Artwork</span>
+              </div>
+>>>>>>> b65cfcf5d492b983a9ba61a8fed63f28791ccc92
               
               {/* Floating design elements */}
               <div className="absolute top-10 left-10 w-16 h-16 bg-rangoli-gold/30 rounded-full animate-float" style={{ animationDelay: '0s' }}></div>

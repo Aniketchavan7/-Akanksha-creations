@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> b65cfcf5d492b983a9ba61a8fed63f28791ccc92
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
@@ -7,6 +11,7 @@ interface GalleryItem {
   title: string;
   category: string;
   image: string;
+<<<<<<< HEAD
   description?: string;
 }
 
@@ -103,12 +108,28 @@ const Gallery = () => {
       image: "/lovable-uploads/48b2726b-1bc8-4e88-abe6-1fcdfc0659ed.png",
       description: "Welcome rangoli featuring traditional kalash design"
     },
+=======
+}
+
+const Gallery = () => {
+  // Sample gallery data - to be replaced with actual images
+  const galleryItems: GalleryItem[] = [
+    { id: 1, title: "Diwali Special", category: "festival", image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07" },
+    { id: 2, title: "Wedding Entrance", category: "wedding", image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb" },
+    { id: 3, title: "Corporate Event", category: "corporate", image: "https://images.unsplash.com/photo-1466442929976-97f336a657be" },
+    { id: 4, title: "Ganesh Chaturthi", category: "festival", image: "https://images.unsplash.com/photo-1472396961693-142e6e269027" },
+    { id: 5, title: "Home Decor", category: "home", image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07" },
+    { id: 6, title: "Wedding Stage", category: "wedding", image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb" },
+>>>>>>> b65cfcf5d492b983a9ba61a8fed63f28791ccc92
   ];
 
   const [activeTab, setActiveTab] = useState("all");
 
+<<<<<<< HEAD
   const categories = ["all", ...new Set(galleryItems.map(item => item.category))];
 
+=======
+>>>>>>> b65cfcf5d492b983a9ba61a8fed63f28791ccc92
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -137,11 +158,16 @@ const Gallery = () => {
           <h2 className="text-4xl font-bold text-rangoli-purple mb-4">Our Rangoli Gallery</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Browse through our collection of beautiful rangoli designs created by Akanksha Creations.
+<<<<<<< HEAD
             Each design is handcrafted with precision and creativity for various occasions.
+=======
+            Each design is handcrafted with precision and creativity.
+>>>>>>> b65cfcf5d492b983a9ba61a8fed63f28791ccc92
           </p>
         </div>
 
         <Tabs defaultValue="all" className="w-full">
+<<<<<<< HEAD
           <div className="flex justify-center mb-8 overflow-x-auto">
             <TabsList className="bg-rangoli-cream border border-rangoli-purple/10 p-1 flex flex-wrap justify-center">
               {categories.map((category) => (
@@ -154,6 +180,45 @@ const Gallery = () => {
                   {category === "all" ? "All Designs" : category}
                 </TabsTrigger>
               ))}
+=======
+          <div className="flex justify-center mb-8">
+            <TabsList className="bg-rangoli-cream border border-rangoli-purple/10 p-1">
+              <TabsTrigger 
+                value="all" 
+                onClick={() => setActiveTab("all")}
+                className="data-[state=active]:bg-rangoli-purple data-[state=active]:text-white"
+              >
+                All Designs
+              </TabsTrigger>
+              <TabsTrigger 
+                value="festival" 
+                onClick={() => setActiveTab("festival")}
+                className="data-[state=active]:bg-rangoli-purple data-[state=active]:text-white"
+              >
+                Festivals
+              </TabsTrigger>
+              <TabsTrigger 
+                value="wedding" 
+                onClick={() => setActiveTab("wedding")}
+                className="data-[state=active]:bg-rangoli-purple data-[state=active]:text-white"
+              >
+                Weddings
+              </TabsTrigger>
+              <TabsTrigger 
+                value="corporate" 
+                onClick={() => setActiveTab("corporate")}
+                className="data-[state=active]:bg-rangoli-purple data-[state=active]:text-white"
+              >
+                Corporate
+              </TabsTrigger>
+              <TabsTrigger 
+                value="home" 
+                onClick={() => setActiveTab("home")}
+                className="data-[state=active]:bg-rangoli-purple data-[state=active]:text-white"
+              >
+                Home
+              </TabsTrigger>
+>>>>>>> b65cfcf5d492b983a9ba61a8fed63f28791ccc92
             </TabsList>
           </div>
 
@@ -190,7 +255,12 @@ const Gallery = () => {
             </motion.div>
           </TabsContent>
 
+<<<<<<< HEAD
           {categories.filter(cat => cat !== "all").map((category) => (
+=======
+          {/* Render filtered items for each category */}
+          {["festival", "wedding", "corporate", "home"].map((category) => (
+>>>>>>> b65cfcf5d492b983a9ba61a8fed63f28791ccc92
             <TabsContent key={category} value={category} className="mt-0">
               <motion.div 
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
